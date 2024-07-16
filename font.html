@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: Graphie-Regular;
+        src: url("./fonts/Graphie-Regular.otf");
+      }
+
+      @font-face {
+        font-family: Graphie-ExtraBold;
+        src: url("./fonts/Graphie-ExtraBold.otf");
+      }
+
+      p {
+        font-size: 36px;
+      }
+
+      p:first-of-type {
+        font-family: Graphie-Regular;
+      }
+
+      #p {
+        font-family: Graphie-ExtraBold;
+      }
+    </style>
+  </head>
+  <body>
+    <p>The quick brown fox jumps over the lazy dog</p>
+    <p id="p">The quick brown fox jumps over the lazy dog</p>
+  </body>
+</html>

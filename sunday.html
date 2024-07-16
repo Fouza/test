@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const persons_list = [
+        {
+          firstName: "test",
+          lastName: "test",
+          age: 12,
+        },
+        {
+          firstName: "amanai",
+          lastName: "amanai",
+          age: 13,
+        },
+        {
+          firstName: "Jon",
+          lastName: "Snow",
+          age: 15,
+        },
+        {
+          firstName: "Dothraki",
+          lastName: "What",
+          age: 15,
+        },
+      ];
+
+      const _map = new Map();
+      _map.set("firstName", "Jon");
+      _map.set("lastName", "Snow");
+
+      console.log(_map);
+      console.log(_map.keys());
+
+      console.log(_map.size);
+
+      //   person.firstName;
+      //   person["firstName"];
+
+      //   const array1 = ["a", "b"];
+      //   const array2 = ["c", "d"];
+      //   console.log([...array1, ...array2]);
+      //   console.log(
+      //     persons_list.reduce(
+      //       (acc, c, i) => Object.assign(acc, { ["firstName"]: c.firstName }), //Fn
+      //       {} //Initial Value
+      //     )
+      //   );
+      //   {firstName0: 'test', firstName1: 'amanai', firstName2: 'Jon', firstName3: 'Dothraki'}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 300vh;
+      }
+    </style>
+  </head>
+  <!-- <body onscroll="console.log(window.scrollY)"> -->
+  <body>
+    <p id="demo">HEEERE</p>
+    <div class="container" id="container">
+      <p>P Element</p>
+      <span>SPAN Element</span>
+      <button id="button" onclick="console.log(`CLICK1`)">CLICK ME !</button>
+    </div>
+    <script>
+      async function myDisplayer() {
+        let promise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("TESSSSSTTT");
+          }, 1000);
+        });
+
+        document.getElementById("demo").innerHTML = await promise;
+      }
+    </script>
+    <script>
+      const el = document.getElementsByClassName("container");
+      const f_child = el[0].firstElementChild;
+      el[0].removeChild(f_child);
+      const new_h2 = document.createElement("h2");
+      new_h2.innerHTML = "Appended Child";
+      el[0].appendChild(new_h2);
+
+      document.write("TEEEEST");
+      //   window.close();
+    </script>
+    <script>
+      document.getElementById("button").addEventListener("click", () => {
+        console.log("CLICK2");
+      });
+      document.getElementById("button").addEventListener("click", () => {
+        console.log("CLICK3");
+      });
+    </script>
+    <!-- window -->
+    <script>
+      window.scrollTo({
+        top: 600,
+        left: 0,
+        behavior: "auto",
+      });
+    </script>
+
+    <script>
+      // Save data to sessionStorage
+      sessionStorage.setItem("test_key", "TEST");
+
+      // Get saved data from sessionStorage
+      let data = sessionStorage.getItem("test_key");
+      console.log(data);
+      //   // Remove saved data from sessionStorage
+      //   sessionStorage.removeItem("test_key");
+
+      //   // Remove all saved data from sessionStorage
+      //   sessionStorage.clear();
+    </script>
+  </body>
+</html>

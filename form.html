@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2 id="h2">JavaScript Validation</h2>
+
+    <form
+      id="1"
+      name="myForm"
+      action="/action_page.php"
+      onsubmit="return validateForm()"
+      method="post"
+    >
+      Name: <input type="text" name="fname" id="2" />
+      <input type="submit" value="Submit" id="3" />
+    </form>
+
+    <script>
+      function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        console.log(x, x.length);
+        if (!x || x.length == 0) {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- Another way -->
+<!-- 
+    <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form action="/action_page.php" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click submit, without filling out the text field,
+your browser will display an error message.</p>
+
+</body>
+</html>
+
+ -->

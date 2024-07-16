@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">Test when var is declared in a Function-Scope</p>
+    <button onclick="test()">Test</button>
+    <button onclick="test2()">Test 2</button>
+
+    <br /><br />
+
+    <button onclick="test4()">Test4</button>
+    <script></script>
+
+    <script>
+      // Var has function-level scope, which makes the variables declared
+      // with var accessible throughout the function they are declared in.
+
+      function test() {
+        var x = 3; // x is declared in the scope of the function
+        console.log("test x = ", x); // shows 3
+      }
+
+      function test2() {
+        console.log("test2 x = ", x); // x is not defined
+      }
+      // console.log("script1 x = ", x); // x is not defined
+    </script>
+
+    <script>
+      function test4() {
+        // console.log("test4 t = ", t); // t is not defined
+        console.log("test4 x = ", x); // x is not defined
+      }
+
+      console.log("script 2 = ", x); // x is not defined
+    </script>
+  </body>
+</html>

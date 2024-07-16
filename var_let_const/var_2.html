@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">Test When Var is Declared In Global-Scope</p>
+    <button onclick="test()">Test</button>
+
+    <br /><br />
+
+    <button onclick="test3()">Test3</button>
+    <script>
+      // 3. However, it is not accessible in precedent scripts
+      console.log("Precedent script z shows undefined ");
+      console.log(z); // z is not defined
+      console.log("IS THIS SCRIPT IS STILL RUNNING ?"); //No it stops because there's an error before it
+    </script>
+    <script>
+      // Var has function-level scope, which makes the variables declared
+      // with var accessible throughout the function they are declared in.
+
+      var z = 1; // 1. z is declared in the global scope so it's accessible everywhere in the script
+
+      function test() {
+        console.log("test z = ", z); // shows 1
+      }
+
+      // console.log("script1 x = ", x); // x is not defined
+      console.log("script1 z = ", z); //shows 1
+    </script>
+
+    <script>
+      // 2. It is also accessible in the next scripts because JavaScript is executed sequentially from top to bottom
+
+      function test3() {
+        console.log(z); // shows 1
+      }
+
+      console.log("script2 z = ", z); // shows1
+    </script>
+  </body>
+</html>

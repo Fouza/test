@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">Test</p>
+
+    <script>
+      var x = 3;
+
+      console.log("After first declaration = ", x); // Shows 3
+
+      function Test() {
+        // A function is a block that creates a new scope regardless of let, var, const
+
+        var x = 4;
+        console.log("Inside Test and After declaration x = ", x); // Shows 4
+        // Here x always shows 4 because a function creates a new scope for x
+      }
+      Test();
+
+      console.log("Outside Test x and After declaration = ", x); // Shows 3 ===> Changes made by the function doesn't apply
+    </script>
+  </body>
+</html>

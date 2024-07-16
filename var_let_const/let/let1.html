@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Variables declared with let have block-level scope,
+      //which means they are only accessible within the block, statement, or expression where they are declared, not outside of it.
+
+      let x = 1;
+
+      {
+        // Blocks are typically used with control structures such as if, for, while, etc.
+        let x = 2;
+        console.log("inside block x = ", x); // Shows 2
+      }
+
+      console.log("Outside block x = ", x); // Shows 1
+    </script>
+    <!-- const  ========> Similar to let, const has a block-level scope as well. -->
+    <!-- replace const with let and it'll work -->
+    <script>
+      function exampleFunction() {
+        if (true) {
+          // A block creates a scope for let and const
+          let x = 1;
+          console.log(x); // logs 1
+        }
+        console.log(x); // x is not defined
+      }
+
+      exampleFunction();
+    </script>
+  </body>
+</html>

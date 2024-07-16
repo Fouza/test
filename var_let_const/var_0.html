@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">Test</p>
+
+    <script>
+      var x = 3;
+      console.log("After first declaration = ", x); // Shows 3
+      {
+        //---------Blocks are typically used with control structures such as if, for, while, etc.
+        // This block doesn't create a scope for var
+        // But it creates a scope of let and const ===> so let and const declared here can't be used outside
+        // And redeclaring a var applies in the global scope
+        // Because; since this block doesn't create a scope for var, it uses the global one.
+        console.log(x); // show 3
+        var x = 4;
+        console.log("Inside Test and After declaration x = ", x); // Shows 4
+        // Here x always show 4 because a function creates a new scope for x
+      }
+
+      console.log("Outside Test x and After declaration = ", x); // Shows 4 ===> Changes made my the blcok applies here
+    </script>
+
+    <script>
+      function exampleFunction() {
+        //Example of using a block to declare a var
+        //Again : A block doesn't create a scope for var, so it can be used outside of it
+        if (true) {
+          var y = 2;
+          console.log(y); // shows 2
+        }
+        console.log(y); // shows 2
+      }
+
+      exampleFunction();
+    </script>
+    <script>
+      {
+        console.log("Var z declared inside block as 10");
+        var z = 10; // shows 10
+      }
+      console.log("Var outside the block show z = ", z); // show 10
+    </script>
+  </body>
+</html>

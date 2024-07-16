@@ -1,0 +1,12 @@
+Variables declared with var have function level scope => They are only accessible within the function they are declared in
+However, if we declare a variable with var outside of any function (In the global scope) It becomes a global variable and is accessible 
+everywhere throughout the script and the next (upcoming) scripts. Why so ? Because JavaScripts are executed sequentially and they all share 
+ONE GLOBAL SCOPE.
+
+let and const behaves the same way as each other; variables declared with let and const are block level scope
+It means they are only accessible inside the block they are declared in
+
+DIFFERENCE BETWEEN FUNCTION AND BLOCK SCOPE :
+
+A block doesn't declare scope for var, it only declares a scope for let and const
+A function declares a scope for every variable that's declared inside it
